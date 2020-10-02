@@ -1,0 +1,43 @@
+body {
+    background: black;
+}
+.container{
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    display: inline-flex;
+    font-size: 2em;
+    margin-top: 50;
+    margin-bottom: 0.67em;
+    margin-left: 50px;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: 'Epilogue', sans-serif;
+    color: white;
+}
+h2 {
+    display: inline-flex;
+    font-size: 1em;
+    margin-top: 50;
+    margin-bottom: 0.67em;
+    margin-left: 50px;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: 'Epilogue', sans-serif;
+    color: white;
+}
+label {
+    display: inline-flex;
+    font-size: 1em;
+    margin-top: 50;
+    margin-bottom: 0.67em;
+    margin-left: 50px;
+    margin-right: 0;
+    font-weight: bold;
+    font-family: 'Epilogue', sans-serif;
+    color: white;
+}
+.axisWhite {
+    stroke: white;
+}
