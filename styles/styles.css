@@ -2,10 +2,25 @@ body {
     background: black;
     margin: 0px;
 }
+/* html {
+    background: black;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+} */
+/* div {
+    /* height: 150px;
+    width: 100%; */
+    
+
 p {
     font-family: 'Epilogue', sans-serif;
     color: white;
-    margin: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
     line-height: 1.5em;
 }
 .dashboard{
@@ -22,6 +37,7 @@ p {
     border-width: 10px;
     margin-top: 20px;
     margin-left: 20px;
+    overflow-y: scroll;
 }
 .container{
     position: fixed;
@@ -42,8 +58,9 @@ p {
     margin-left: 20px;
 }
 .item{
-    margin: 0px;
-    padding: 0;
+    justify-content: center;
+    margin: 50px;
+    padding: 0px;
 }
 h1 {
     display: inline-flex;
@@ -60,35 +77,61 @@ h2 {
     display: flex;
     font-size: 1em;
     margin-top: 50;
-    margin-left: 50px;
-    margin-right: 0;
+    /* margin-left: 50px;
+    margin-right: 50px; */
     padding: 10px;
     font-weight: bold;
     font-family: 'Epilogue', sans-serif;
     color: white;
+    line-height: 1.5em;
+}
+p {
+    display: flex;
+    font-size: 18;
+    margin-top: 50;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    font-weight: bold;
+    font-family: 'Epilogue', sans-serif;
+    color: white;
+    line-height: 1.5em;
 }
 .mapTitle {
-    display: block;
-    width: 100%;
+    display: flex;
+    position: fixed;
+    top:0;
+    left:0;
+    /* width: 100%; */
     font-size: 2em;
-    margin-top: -30px;
+    margin-top: 10px;
     margin-bottom: 0px;
-    margin-left: 50px;
-    margin-right: -70px;
-    padding: 10px;
+    margin-left: 479px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
     font-weight: bold;
     font-family: 'Epilogue', sans-serif;
     color: white;
     background: black;
 }
 .dashTitle {
+    display: flex;
+    position: fixed;
+    top:0;
+    left:0;
+    /* width: 350px; */
+    /* margin-left: 20px; */
     display: block;
     font-size: 2em;
-    margin-top: -30px;
+    margin-top: 10px;
     margin-bottom: 0px;
-    margin-left: 0px;
+    margin-left: 45px;
     margin-right: 0px;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    text-align: center;
     font-weight: bold;
     font-family: 'Epilogue', sans-serif;
     color: white;
@@ -114,6 +157,10 @@ h2 {
     background: black;
     transform: rotate(-90deg);
 } */
+.meter {
+    margin-top: 20px;
+    /* line-height: 3em; */
+}
 label {
     display: inline-flex;
     font-size: 1em;

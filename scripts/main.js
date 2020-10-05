@@ -18,9 +18,9 @@ d3.json('data/data.json').then(function(data){
   let bins = bin(caratWeights);
 
   // define dimensions and margins for the graphic
-  var margin = ({top: 100, right: 50, bottom: 100, left: 80})
-      width = 1400,
-      height = 700 - margin.top - margin.bottom;
+  var margin = ({top: 10, right: 0, bottom: 10, left: 0})
+      width = 1200,
+      height = 350 - margin.top - margin.bottom;
 
   // Define the scales
   var x = d3.scaleLinear()
@@ -46,19 +46,19 @@ d3.json('data/data.json').then(function(data){
       .selectAll("line")
       .data(bins)
       .join("line")
-      .attr("x1", d => x(d.x0) + 1)
-      .attr("x2", d => x(d.x0) + 1)
+      .attr("x1", d => x(d.x0) + 5)
+      .attr("x2", d => x(d.x0) + 5)
       .attr("y2", d => y(d.length))
-      .attr("y1", height - 100)
+      .attr("y1", height - 10)
     // svg.append("g")
     //   .attr("transform", "translate(0," + height + ")")
     //   .attr("class", "axisWhite")
     //   .call(d3.axisBottom(x));
     svg.append("line")
-      .attr("x1", d => x(d.x0) + 1)
-      .attr("x2", d => x(d.x0) + 1)
+      .attr("x1", d => x(d.x0) + 5)
+      .attr("x2", d => x(d.x0) + 5)
       .attr("y2", d => y(d.length))
-      .attr("y1", height - 100)
+      .attr("y1", height - 10)
       .each(function(d) {this._current = d;} )
 });
 
@@ -77,9 +77,9 @@ d3.json('data/data.json').then(function(data){
   let bins = bin(caratWeights);
 
   // define dimensions and margins for the graphic
-  var margin = ({top: 100, right: 50, bottom: 100, left: 80})
-      width = 1400,
-      height = 700 - margin.top - margin.bottom;
+  var margin = ({top: 10, right: 0, bottom: 10, left: 0})
+      width = 1200,
+      height = 350 - margin.top - margin.bottom;
 
   // Define the scales
   var x = d3.scaleLinear()
@@ -105,8 +105,8 @@ d3.json('data/data.json').then(function(data){
       .selectAll("line")
       .data(bins)
       .join("line")
-      .attr("x1", d => x(d.x0) + 1)
-      .attr("x2", d => x(d.x0) + 1)
+      .attr("x1", d => x(d.x0) + 5)
+      .attr("x2", d => x(d.x0) + 5)
       .attr("y2", d => y(d.length))
       .attr("y1", height - d)
     // svg.append("g")
@@ -114,8 +114,8 @@ d3.json('data/data.json').then(function(data){
     //   .attr("class", "axisWhite")
     //   .call(d3.axisBottom(x));
     svg.append("line")
-      .attr("x1", d => x(d.x0) + 1)
-      .attr("x2", d => x(d.x0) + 1)
+      .attr("x1", d => x(d.x0) + 5)
+      .attr("x2", d => x(d.x0) + 5)
       .attr("y2", d => y(d.length))
       .attr("y1", height - d)
       .each(function(d) {this._current = d;} )
@@ -138,7 +138,7 @@ d3.json('data/data.json').then(function(data){
   // define dimensions and margins for the graphic
   var margin = ({top: 2, right: 0, bottom: 2, left: 0})
       width = 350,
-      height = 175 - margin.top - margin.bottom;
+      height = 125 - margin.top - margin.bottom;
 
   // Define the scales
   var x = d3.scaleLinear()
@@ -197,7 +197,7 @@ d3.json('data/data.json').then(function(data){
   // define dimensions and margins for the graphic
   var margin = ({top: 3, right: 0, bottom: 3, left: 0})
       width = 350,
-      height = 175 - margin.top - margin.bottom;
+      height = 125 - margin.top - margin.bottom;
 
   // Define the scales
   var x = d3.scaleLinear()
@@ -223,8 +223,8 @@ d3.json('data/data.json').then(function(data){
       .selectAll("line")
       .data(bins)
       .join("line")
-      .attr("x1", d => x(d.x0) + 1)
-      .attr("x2", d => x(d.x0) + 1)
+      .attr("x1", d => x(d.x0) + 1.5)
+      .attr("x2", d => x(d.x0) + 1.5)
       .attr("y2", d => y(d.length))
       .attr("y1", height - d)
     // svg.append("g")
@@ -232,8 +232,8 @@ d3.json('data/data.json').then(function(data){
     //   .attr("class", "axisWhite")
     //   .call(d3.axisBottom(x));
     svg.append("line")
-      .attr("x1", d => x(d.x0) + 1)
-      .attr("x2", d => x(d.x0) + 1)
+      .attr("x1", d => x(d.x0) + 1.5)
+      .attr("x2", d => x(d.x0) + 1.5)
       .attr("y2", d => y(d.length))
       .attr("y1", height - d)
       .each(function(d) {this._current = d;} )
@@ -256,7 +256,7 @@ d3.json('data/data.json').then(function(data){
   // define dimensions and margins for the graphic
   var margin = ({top: 5, right: 0, bottom: 5, left: 0})
       width = 350,
-      height = 175 - margin.top - margin.bottom;
+      height = 125 - margin.top - margin.bottom;
 
   // Define the scales
   var x = d3.scaleLinear()
