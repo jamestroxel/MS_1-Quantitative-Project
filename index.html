@@ -10,18 +10,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>Smithsonian Rock Ranger</h1>
-        <form>
-            <label for="fname">Carat weight between 0 and:</label>
-            <input onchange="inputRange()" type="number" id="fname" value="1">
-        </form>
-        <!-- <form>
-            <label for="fname">Carat weight between 0 and:</label>
-            <input type="number" id="fname" name="fname" value="100">
-            <input onchange="inputRange()" type="submit" value="Submit">
-        </form> -->
+        <div class="item">
+            <h1 class="mapTitle">Smithsonian Rock Ranger</h1>
+            <h2>Carat Weight demos</h2>
+            <!-- <form style="margin-left:25px;">
+                <input onchange="inputRange3()" type="number" id="fname" value="100"> -->
+            </div>
+            <div class="item">
+                <div id="viz"></div>
+                <div id="viz2"></div>
+            </div>
+        </div>
+        <div class="dashboard">
+            <h2 class="dashTitle">Start looking</h2>
+        <div class="item">
+            <p>This page is a draft layout and design study for the full interacitve map project.</p>
+            <p>The two large charts to the right serve to illustrate the formal and conceptual considerations made for the way the carat and color meters could represent the data. The more traditional looking chart on the top works well as a stand-alone, static bar chart. However, the chart below it more closely resembles the low-resolution computer imaging effect I am after. I also like positive/negative play between the chart and chart area that recalls some type of sonar or infrared imaging technology designed to chart something invisible, which strikes me as especially relevent to the act of hunting for gems on a map.</p>
+            <p>The charts below are intended to give a more accurate sense of how the meter will appear in its final state on this interactive map. </p>
+        </div>
+        <div class="item">
+            <div id="viz3"></div>
+            <div id="viz4"></div>
+            <div id="viz5"></div>
+        </div>
+        <div class="item">
+        </div>
     </div>
-    <div id="viz"></div>
     <script src="scripts/main.js"></script>
 </body>
 

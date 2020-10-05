@@ -1,8 +1,48 @@
 body {
     background: black;
+    margin: 0px;
+}
+p {
+    font-family: 'Epilogue', sans-serif;
+    color: white;
+    margin: 20px;
+    line-height: 1.5em;
+}
+.dashboard{
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    width: 400px;
+    height: 100%;
+    border: white;
+    border-style: solid;
+    border-width: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 .container{
-    margin: 0;
+    position: fixed;
+    top: 0;
+    left:0;
+    justify-content: left;
+    flex-wrap: wrap;
+    flex-flow: row;
+    display: flex;
+    /* align-content: center; */
+    width: 100%;
+    height: 100%;
+    border: white;
+    border-style: solid;
+    border-width: 10px;;
+    padding-left: 410px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.item{
+    margin: 0px;
     padding: 0;
 }
 h1 {
@@ -10,23 +50,70 @@ h1 {
     font-size: 2em;
     margin-top: 50;
     margin-bottom: 0.67em;
-    margin-left: 50px;
+    margin-left: 75px;
     margin-right: 0;
     font-weight: bold;
     font-family: 'Epilogue', sans-serif;
     color: white;
 }
 h2 {
-    display: inline-flex;
+    display: flex;
     font-size: 1em;
     margin-top: 50;
-    margin-bottom: 0.67em;
     margin-left: 50px;
     margin-right: 0;
+    padding: 10px;
     font-weight: bold;
     font-family: 'Epilogue', sans-serif;
     color: white;
 }
+.mapTitle {
+    display: block;
+    width: 100%;
+    font-size: 2em;
+    margin-top: -30px;
+    margin-bottom: 0px;
+    margin-left: 50px;
+    margin-right: -70px;
+    padding: 10px;
+    font-weight: bold;
+    font-family: 'Epilogue', sans-serif;
+    color: white;
+    background: black;
+}
+.dashTitle {
+    display: block;
+    font-size: 2em;
+    margin-top: -30px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 10px;
+    font-weight: bold;
+    font-family: 'Epilogue', sans-serif;
+    color: white;
+    background: black;
+}
+/* .rockRanger {
+    align-content: center;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 400
+    bottom: -100;
+    display: flex;
+    vertical-align: middle;
+    margin-bottom: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 10px;
+    font-weight: bold;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.5em;
+    color: white;
+    background: black;
+    transform: rotate(-90deg);
+} */
 label {
     display: inline-flex;
     font-size: 1em;
