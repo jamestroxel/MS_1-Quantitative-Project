@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Smithsonian Institution IDS 404 Page Not Found</title>
+
+<style type="text/css">
+body {background-color:#EEE}
+p {margin-left:20px;color: #333333;font-family:'Palatino Linotype','Book Antiqua', Palatino, serif;}
+p#head1  {font-size:200%; } 
+</style>
+</head>
+<body>
+<img src='/images/si.gif'/>
+<p/>
+<hr/>
+<p id='head1'>IDS: Image Delivery Service</p>
+<p id='head1'>HTTP Error 404: Page Not Found</p>
+<p>We could not find the resource you are requesting.</p>
+
+</body>
+</html>

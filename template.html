@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3-interpolate.v2.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v3.min.js"></script>
+    <script src="https://d3js.org/d3-geo.v2.min.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@900&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+    <div class="container">
+        <div id="map"></div>
+        <div class="svgContainer">
+            <svg class="svgItem" viewBox="2.5 2.5 152.5 110" xmlns="http://www.w3.org/2000/svg">
+                <g fill="white" stroke-width="5" stroke-linecap="round">
+                  <line x1="17.5" x2="17.5" y1="35" y2=100 stroke="DeepPink"/>
+                  <line x1="25" x2="25" y1="5" y2=100 stroke="red"/>
+                  <line x1="32.5" x2="32.5" y1="43" y2=100 stroke="orangeRed"/>
+                  <line x1="40" x2="40" y1="54" y2=100 stroke="DarkOrange"/>
+                  <line x1="47.5" x2="47.5" y1="56" y2=100 stroke="orange"/>
+                  <line x1="55" x2="55" y1="21" y2=100 stroke="gold"/>
+                  <line x1="62.5" x2="62.5" y1="25" y2=100 stroke="greenyellow"/>
+                  <line x1="70" x2="70" y1="27" y2=100 stroke="limegreen"/>
+                  <line x1="77.5" x2="77.5" y1="37" y2=100 stroke="seagreen"/>
+                  <line x1="85" x2="85" y1="35" y2=100 stroke="mediumseagreen"/>
+                  <line x1="92.5" x2="92.5" y1="5" y2=100 stroke="lightseagreen"/>
+                  <line x1="100" x2="100" y1="43" y2=100 stroke="deepskyblue"/>
+                  <line x1="107.5" x2="107.5" y1="54" y2=100 stroke="dodgerblue"/>
+                  <line x1="115" x2="115" y1="56" y2=100 stroke="blue"/>
+                  <line x1="122.5" x2="122.5" y1="21" y2=100 stroke="navy"/>
+                  <line x1="130" x2="130" y1="25" y2=100 stroke="indigo"/>
+                  <line x1="137.5" x2="137.5" y1="27" y2=100 stroke="purple"/>
+                  <line x1="145" x2="145" y1="37" y2=100 stroke="white"/>
+                  <line x1="152.5" x2="152.5" y1="37" y2=100 stroke="dimgrey"/>
+                </g>
+                <g fill="white" stroke-width="5" stroke-linecap="round">
+                    <circle cx="17.5" cy="105" r="2.5" fill="DeepPink"/>
+                    <circle cx="25" cy="105" r="2.5" fill="red"/>
+                    <circle cx="32.5" cy="105" r="2.5" fill="orangeRed"/>
+                    <circle cx="40" cy="105" r="2.5" fill="DarkOrange"/>
+                    <circle cx="47.5" cy="105" r="2.5" fill="orange"/>
+                    <circle cx="55" cy="105" r="2.5" fill="gold"/>
+                    <circle cx="62.5" cy="105" r="2.5" fill="greenyellow"/>
+                    <circle cx="70" cy="105" r="2.5" fill="limegreen"/>
+                    <circle cx="77.5" cy="105" r="2.5" fill="seagreen"/>
+                    <circle cx="85" cy="105" r="2.5" fill="mediumseagreen"/>
+                    <circle cx="92.5" cy="105" r="2.5" fill="lightseagreen"/>
+                    <circle cx="100" cy="105" r="2.5" fill="deepskyblue"/>
+                    <circle cx="107.5" cy="105" r="2.5" fill="dodgerblue"/>
+                    <circle cx="115" cy="105" r="2.5" fill="blue"/>
+                    <circle cx="122.5" cy="105" r="2.5" fill="navy"/>
+                    <circle cx="130" cy="105" r="2.5" fill="indigo"/>
+                    <circle cx="137.5" cy="105" r="2.5" fill="purple"/>
+                    <circle cx="145" cy="105" r="2.5" fill="white"/>
+                    <circle cx="152.5" cy="105" r="2.5" fill="dimgrey"/>
+                  </g>
+            </svg>
+        </div>
+    </div>
+    <div class="item">
+        <h1 class="mapTitle">Smithsonian Rock Ranger</h1>
+    </div>
+    <div class="dashboard">
+        <div class="item">
+            <img src="downloads/NMNH-10k0025-G9022-00-nr.jpg" alt="Girl in a jacket" width="350" height="">
+            <p>Name</p>
+            <p>Carats:</p>
+            <p>Cut:</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum odio ultrices ligula venenatis condimentum. Aliquam ultrices, ex eu porta dictum, odio massa condimentum magna, quis efficitur justo massa vel quam.</p>
+        </div>
+        <div class="ranger">
+            <div class="meter" id="viz3"></div>
+            <svg viewBox="-1 0 406.25 55" xmlns="http://www.w3.org/2000/svg">
+                <g fill="white" stroke-width="0" stroke-linecap="round">
+                   <circle cx=".75" cy="25" r=".5" fill="white"/>
+                   <circle cx="20.75" cy="25" r="1" fill="white"/>
+                   <circle cx="40.5" cy="25" r="1.5" fill="white"/>
+                   <circle cx="62.25" cy="25" r="2" fill="white"/>
+                   <circle cx="83" cy="25" r="2.5" fill="white"/>
+                   <circle cx="103.75" cy="25" r="3" fill="white"/>
+                   <circle cx="124.5" cy="25" r="3.5" fill="white"/>
+                   <circle cx="145.25" cy="25" r="4" fill="white"/>
+                   <circle cx="166" cy="25" r="4.5" fill="white"/>
+                   <circle cx="186.75" cy="25" r="5" fill="white"/>
+                   <circle cx="207.5" cy="25" r="5.5" fill="white"/>
+                   <circle cx="228.25" cy="25" r="6" fill="white"/>
+                   <circle cx="249" cy="25" r="6.5" fill="white"/>
+                   <circle cx="269.75" cy="25" r="7" fill="white"/>
+                   <circle cx="290.5" cy="25" r="7.5" fill="white"/>
+                   <circle cx="311.25" cy="25" r="8" fill="white"/>
+                   <circle cx="332" cy="25" r="8.5" fill="white"/>
+                   <circle cx="352.75" cy="25" r="9" fill="white"/>
+                   <circle cx="373.5" cy="25" r="9.5" fill="white"/>
+                   <circle cx="394.25" cy="25" r="10" fill="white"/>
+                 </g>
+            </svg>
+            <!-- <div class="meter" id="viz4"></div> -->
+            <svg class="colorMeter" viewBox="-12.5 0 406.25 55" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <g fill="white" stroke-width="25" stroke-linecap="round">
+                  <line x1="0" x2="0" y1="35" y2=50 stroke="DeepPink"/>
+                  <line x1="20" x2="20" y1="15" y2=50 stroke="red"/>
+                  <line x1="40" x2="40" y1="43" y2=50 stroke="orangeRed"/>
+                  <line x1="60" x2="60" y1="44" y2=50 stroke="DarkOrange"/>
+                  <line x1="80" x2="80" y1="46" y2=50 stroke="orange"/>
+                  <line x1="100" x2="100" y1="21" y2=50 stroke="gold"/>
+                  <line x1="120" x2="120" y1="25" y2=50 stroke="greenyellow"/>
+                  <line x1="140" x2="140" y1="27" y2=50 stroke="limegreen"/>
+                  <line x1="160" x2="160" y1="37" y2=50 stroke="seagreen"/>
+                  <line x1="180" x2="180" y1="35" y2=50 stroke="mediumseagreen"/>
+                  <line x1="200" x2="200" y1="25" y2=50 stroke="lightseagreen"/>
+                  <line x1="220" x2="220" y1="43" y2=50 stroke="deepskyblue"/>
+                  <line x1="240" x2="240" y1="44" y2=50 stroke="dodgerblue"/>
+                  <line x1="260" x2="260" y1="46" y2=50 stroke="blue"/>
+                  <line x1="280" x2="280" y1="21" y2=50 stroke="navy"/>
+                  <line x1="300" x2="300" y1="25" y2=50 stroke="indigo"/>
+                  <line x1="320" x2="320" y1="27" y2=50 stroke="purple"/>
+                  <line x1="340" x2="340" y1="37" y2=50 stroke="white"/>
+                  <line x1="360" x2="360" y1="37" y2=50 stroke="dimgrey"/>
+                  <line x1="380" x2="380" y1="37" y2=50 stroke="url(#grad1)"/>
+                </g>
+            </svg>
+            <!-- <div class="meter" id="viz5"></div> -->
+        </div>
+    </div>
+    <h1 class="dashTitle">Start looking</h1>
+    <h1 class="rockRanger">Smithsonian Rock Ranger</h1>
+    <script src="scripts/main.js"></script>
+    <!-- <script src="scripts/colors.js"></script> -->
+</body>
+
+
+</html>
