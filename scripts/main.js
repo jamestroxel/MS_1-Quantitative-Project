@@ -1,10 +1,7 @@
-// document.getElementById("fname").addEventListener("change", inputRange());
-// function inputRange() {
-// };
-// d3.selectAll("svg > *").remove();
-// var input = document.getElementById("fname");
+
 
 var caratWeights =[];
+var colors =[];
 d3.json('data/data.json').then(function(data){ 
   data.forEach(function(d){
     if(d.caratWeight!=null)
@@ -241,59 +238,56 @@ d3.json('data/data.json').then(function(data){
 
 ///// viz5 /////
 
-d3.json('data/data.json').then(function(data){ 
-  data.forEach(function(d){
-    if(d.caratWeight!=null)
-    caratWeights.push(d.caratWeight);
-  })
-  
-  // Define the bins
-  // we're having a cut-off at carathweight 100 and defining the number of bins at 17
-  let bin = d3.bin().domain([0, 5]).thresholds(50);
+// d3.json('data/data.json').then(function(data){ 
+//   data.forEach(function(d){
+//     if(d.color!=null)
+//     colors.push(d.color);
+//   })
+//   // Define the bins
+//   // we're having a cut-off at carathweight 100 and defining the number of bins at 17
+//   let pink = (d.color, )
 
-  let bins = bin(caratWeights);
+//   // define dimensions and margins for the graphic
+//   var margin = ({top: 5, right: 0, bottom: 5, left: 0})
+//       width = 350,
+//       height = 125 - margin.top - margin.bottom;
 
-  // define dimensions and margins for the graphic
-  var margin = ({top: 5, right: 0, bottom: 5, left: 0})
-      width = 350,
-      height = 125 - margin.top - margin.bottom;
-
-  // Define the scales
-  var x = d3.scaleLinear()
-    .domain([bins[0].x0, bins[bins.length - 1].x1])
-    .range([margin.left, width - margin.right]);
+//   // Define the scales
+//   var x = d3.scale.ordinal()
+//   .domain([bins[0].x0, bins[bins.length - 1].x1])
+//   .range([margin.left, width - margin.right])
     
-  var y = d3.scaleLinear()
-    .domain([0, d3.max(bins, d => d.length)])
-    .range([height - margin.bottom, margin.top]);
+//   var y = d3.scaleLinear()
+//     .domain([0, d3.max(bins, d => d.length)])
+//     .range([height - margin.bottom, margin.top]);
 
-    // create an svg container from scratch
-  var svg = d3.select('#viz5')
-    .append('svg')
-    .attr('width', width)
-    .attr('height', height)
-    .attr("fill", "white");
+//     // create an svg container from scratch
+//   var svg = d3.select('#viz5')
+//     .append('svg')
+//     .attr('width', width)
+//     .attr('height', height)
+//     .attr("fill", "white");
     
-    // attach a graphic element, and append rectangles to it
-    svg.append("g")
-      .attr("stroke", "white")
-      .attr("stroke-linecap", "round")
-      .attr("stroke-width", 5)
-      .selectAll("line")
-      .data(bins)
-      .join("line")
-      .attr("x1", d => x(d.x0) + 2.5)
-      .attr("x2", d => x(d.x0) + 2.5)
-      .attr("y2", d => y(d.length))
-      .attr("y1", height - d)
-    // svg.append("g")
-    //   .attr("transform", "translate(0," + height + ")")
-    //   .attr("class", "axisWhite")
-    //   .call(d3.axisBottom(x));
-    svg.append("line")
-      .attr("x1", d => x(d.x0) + 2.5)
-      .attr("x2", d => x(d.x0) + 2.5)
-      .attr("y2", d => y(d.length))
-      .attr("y1", height - d)
-      .each(function(d) {this._current = d;} )
-});
+//     // attach a graphic element, and append rectangles to it
+//     svg.append("g")
+//       .attr("stroke", "white")
+//       .attr("stroke-linecap", "round")
+//       .attr("stroke-width", 5)
+//       .selectAll("line")
+//       .data(bins)
+//       .join("line")
+//       .attr("x1", d => x(d.x0) + 2.5)
+//       .attr("x2", d => x(d.x0) + 2.5)
+//       .attr("y2", d => y(d.length))
+//       .attr("y1", height - d)
+//     // svg.append("g")
+//     //   .attr("transform", "translate(0," + height + ")")
+//     //   .attr("class", "axisWhite")
+//     //   .call(d3.axisBottom(x));
+//     svg.append("line")
+//       .attr("x1", d => x(d.x0) + 2.5)
+//       .attr("x2", d => x(d.x0) + 2.5)
+//       .attr("y2", d => y(d.length))
+//       .attr("y1", height - d)
+//       .each(function(d) {this._current = d;} )
+// });

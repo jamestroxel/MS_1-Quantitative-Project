@@ -137,26 +137,27 @@ p {
     color: white;
     background: black;
 }
-/* .rockRanger {
-    align-content: center;
-    text-align: center;
+.rockRanger {
     position: fixed;
     left: 0;
-    top: 400
-    bottom: -100;
-    display: flex;
-    vertical-align: middle;
-    margin-bottom: 0;
-    margin-left: 0px;
-    margin-right: 0px;
+    /* bottom: 100; */
+    top: 0;
+    /* bottom: 0; */
+    /* display: flex; */
+    /* vertical-align: middle; */
+    margin-top: 280px;
+    margin-left: 44px;
+    /* margin-right: 0px;
+    margin-bottom: 0px; */
     padding: 10px;
     font-weight: bold;
     font-family: 'Epilogue', sans-serif;
-    font-size: 1.5em;
+    font-size: 1em;
     color: white;
     background: black;
     transform: rotate(-90deg);
-} */
+    transform-origin: left bottom;
+}
 .meter {
     margin-top: 20px;
     /* line-height: 3em; */
