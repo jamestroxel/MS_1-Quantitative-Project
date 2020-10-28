@@ -5,31 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3-interpolate.v2.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v3.min.js"></script>
+    <script src="https://d3js.org/d3-geo.v2.min.js"></script>
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@900&display=swap" rel="stylesheet"> -->
 </head>
 <body>
     <div class="container">
-        <div class="item">
-            <h1 class="mapTitle">Smithsonian Rock Ranger</h1>
-            <h2>Carat Weight demos</h2>
-            <p>This page is designed to test out key design elements and give a general sense of the layout, look, and feel for the full interacitve map project.</p>
-            <div class="meter" id="viz"></div>
-            <div class="meter" id="viz2"></div>
-        </div>
+        <div id="viz" class="chart"></div>
+    </div>
+    <div class="item">
+        <h1 class="mapTitle">Smithsonian Rock Ranger</h1>
     </div>
     <div class="dashboard">
         <div class="item">
-            <h1 class="dashTitle">Start looking</h1>
-            <p>The two large charts to the right serve to illustrate the formal and conceptual considerations made for the way the carat and color meters could represent the data. The more traditional looking chart on the top works well as a stand-alone, static bar chart. However, the chart below it more closely resembles the low-resolution computer imaging effect I am after. I really like the idea of the data being invisible in the way it recalls some type of sonar, infrared, or other navigational imaging technology designed to chart something invisible, which strikes me as especially relevent to the concept here.</p>
-            <p>The charts below are intended to give a more accurate sense of how the meter will appear in its final state on this interactive map. </p>
+            <img src="downloads/NMNH-10k0025-G9022-00-nr.jpg" alt="Girl in a jacket" width="350" height="">
+            <p>Name</p>
+            <p>Carats:</p>
+            <p>Cut:</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fermentum odio ultrices ligula venenatis condimentum. Aliquam ultrices, ex eu porta dictum, odio massa condimentum magna, quis efficitur justo massa vel quam.</p>
+        </div>
+        <div class="ranger">
             <div class="meter" id="viz3"></div>
-            <div class="meter" id="viz4"></div>
-            <div class="meter" id="viz5"></div>
+            <svg viewBox="-1 0 406.25 55" xmlns="http://www.w3.org/2000/svg">
+                <g fill="white" stroke-width="0" stroke-linecap="round">
+                   <circle cx=".75" cy="25" r=".5" fill="white"/>
+                   <circle cx="20.75" cy="25" r="1" fill="white"/>
+                   <circle cx="40.5" cy="25" r="1.5" fill="white"/>
+                   <circle cx="62.25" cy="25" r="2" fill="white"/>
+                   <circle cx="83" cy="25" r="2.5" fill="white"/>
+                   <circle cx="103.75" cy="25" r="3" fill="white"/>
+                   <circle cx="124.5" cy="25" r="3.5" fill="white"/>
+                   <circle cx="145.25" cy="25" r="4" fill="white"/>
+                   <circle cx="166" cy="25" r="4.5" fill="white"/>
+                   <circle cx="186.75" cy="25" r="5" fill="white"/>
+                   <circle cx="207.5" cy="25" r="5.5" fill="white"/>
+                   <circle cx="228.25" cy="25" r="6" fill="white"/>
+                   <circle cx="249" cy="25" r="6.5" fill="white"/>
+                   <circle cx="269.75" cy="25" r="7" fill="white"/>
+                   <circle cx="290.5" cy="25" r="7.5" fill="white"/>
+                   <circle cx="311.25" cy="25" r="8" fill="white"/>
+                   <circle cx="332" cy="25" r="8.5" fill="white"/>
+                   <circle cx="352.75" cy="25" r="9" fill="white"/>
+                   <circle cx="373.5" cy="25" r="9.5" fill="white"/>
+                   <circle cx="394.25" cy="25" r="10" fill="white"/>
+                 </g>
+            </svg>
+            <!-- <div class="meter" id="viz4"></div> -->
+            <svg class="colorMeter" viewBox="-12.5 0 406.25 55" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <g fill="white" stroke-width="25" stroke-linecap="round">
+                  <line x1="0" x2="0" y1="35" y2=50 stroke="DeepPink"/>
+                  <line x1="20" x2="20" y1="15" y2=50 stroke="red"/>
+                  <line x1="40" x2="40" y1="43" y2=50 stroke="orangeRed"/>
+                  <line x1="60" x2="60" y1="44" y2=50 stroke="DarkOrange"/>
+                  <line x1="80" x2="80" y1="46" y2=50 stroke="orange"/>
+                  <line x1="100" x2="100" y1="21" y2=50 stroke="gold"/>
+                  <line x1="120" x2="120" y1="25" y2=50 stroke="greenyellow"/>
+                  <line x1="140" x2="140" y1="27" y2=50 stroke="limegreen"/>
+                  <line x1="160" x2="160" y1="37" y2=50 stroke="seagreen"/>
+                  <line x1="180" x2="180" y1="35" y2=50 stroke="mediumseagreen"/>
+                  <line x1="200" x2="200" y1="25" y2=50 stroke="lightseagreen"/>
+                  <line x1="220" x2="220" y1="43" y2=50 stroke="deepskyblue"/>
+                  <line x1="240" x2="240" y1="44" y2=50 stroke="dodgerblue"/>
+                  <line x1="260" x2="260" y1="46" y2=50 stroke="blue"/>
+                  <line x1="280" x2="280" y1="21" y2=50 stroke="navy"/>
+                  <line x1="300" x2="300" y1="25" y2=50 stroke="indigo"/>
+                  <line x1="320" x2="320" y1="27" y2=50 stroke="purple"/>
+                  <line x1="340" x2="340" y1="37" y2=50 stroke="white"/>
+                  <line x1="360" x2="360" y1="37" y2=50 stroke="dimgrey"/>
+                  <line x1="380" x2="380" y1="37" y2=50 stroke="url(#grad1)"/>
+                </g>
+            </svg>
+            <!-- <div class="meter" id="viz5"></div> -->
         </div>
     </div>
+<<<<<<< HEAD
+=======
+    <h1 class="dashTitle">Start looking</h1>
+>>>>>>> c65ed6e852904d26df9a8521f79d1acb3f01b738
     <h1 class="rockRanger">Smithsonian Rock Ranger</h1>
     <script src="scripts/main.js"></script>
+    <script src="scripts/colors.js"></script>
 </body>
 
 
