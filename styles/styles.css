@@ -63,11 +63,11 @@ p {
     overflow-y: scroll;
 }
 .item{
-    width: 350px;
+    width: 100%;
     justify-content: center;
     margin-top: 25px;
     /* margin: 0px; */
-    padding: 0px;
+    padding: 25px;
 }
 .svgContainer{
     width: 1500px;
@@ -184,18 +184,8 @@ p {
     background: black;
 }
 .rockRanger {
-<<<<<<< HEAD
-    position: fixed;
-    left: 0;
-    /* bottom: 100; */
-    top: 0;
-    /* bottom: 0; */
-    /* display: flex; */
-    /* vertical-align: middle; */
-    margin-top: 280px;
+    margin-top: 930px;
     margin-left: 44px;
-    /* margin-right: 0px;
-    margin-bottom: 0px; */
     padding: 10px;
     font-weight: bold;
     font-family: 'Epilogue', sans-serif;
